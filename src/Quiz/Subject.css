@@ -1,0 +1,41 @@
+/* Subject.css */
+
+.subject-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .subject-button {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .subject-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .subject-button:active {
+    transform: scale(0.95);
+  }
+  
+  @media (max-width: 600px) {
+    .subject-button {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  .subject-buttons {
+    max-width: 1000px;
+    margin: auto;
+    row-gap: 30px;
+  }
+  

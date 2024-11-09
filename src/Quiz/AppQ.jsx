@@ -1,19 +1,19 @@
 
-import Footer from './Quiz/Footer'
+import Footer from './QZ/Footer'
 import './App.css';
-import Loader from './Quiz/Loader';
+import Loader from './QZ/Loader';
 import React, { useState } from 'react';
-import ofppt from './Quiz/OFPPT quiz -Logo.jpg';
-import Subjects from './Quiz/Subjects';
-import Quiz from './Quiz/Quiz';
-import Score from './Quiz/Score';
+import x from './QZ/OFPPT quiz -Logo.jpg';
+import Subjects from './QZ/Subjects';
+import Quiz from './QZ/Quiz';
+import Score from './QZ/Score';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('subjects');
   const [selectedSubject, setSelectedSubject] = useState('');
   const [score, setScore] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [incorrectAnswers, setIncorrectAnswers] = useState([]); 
+  const [incorrectAnswers, setIncorrectAnswers] = useState([]); // Pour stocker les mauvaises réponses
 
   const handleSelectSubject = (subject) => {
     setLoading(true);
@@ -64,7 +64,7 @@ const App = () => {
   return (
     <>
       <div className="App">
-        <img className='logo' src={ofppt} alt="Logo" />     
+        <img className='logo' src={x} alt="Logo" />     
         <h1>Quiz sur les Matières</h1>
         {renderPage()} 
       </div>
