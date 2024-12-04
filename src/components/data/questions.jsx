@@ -1,4 +1,4 @@
-// src/data/questions.js
+
 const questions = {
   React :[
     { question: "Qu'est-ce que React ?", answers: ["Framework", "Langage de programmation", "Interface utilisateur", "Bibliothèque JavaScript"], correct: 3 },

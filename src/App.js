@@ -1,12 +1,12 @@
 
-import Footer from './Quiz/Footer'
+import Footer from './components/PageElements/Footer'
 import './App.css';
-import Loader from './Quiz/Loader';
+import Loader from './components/PageElements/Loader';
 import React, { useState } from 'react';
-import ofppt from './Quiz/OFPPT quiz -Logo.jpg';
-import Subjects from './Quiz/Subjects';
-import Quiz from './Quiz/Quiz';
-import Score from './Quiz/Score';
+import ofppt from './components/images/OFPPT quiz -Logo.jpg';
+import Subjects from './components/Subjects';
+import Quiz from './components/Quiz';
+import Score from './components/Score';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('subjects');
@@ -48,7 +48,7 @@ const App = () => {
         return <Quiz subject={selectedSubject} onScore={handleScore} />;
       case 'score':
         return (
-          <Score
+          <Score 
             score={score}
             totalQuestions={30}
             incorrectAnswers={incorrectAnswers} 

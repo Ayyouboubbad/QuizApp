@@ -1,13 +1,13 @@
 import React from 'react';
-import reactLogo from './react.png';
-import sqlLogo from './sql.png';
-import laravelLogo from './laravel.png';
-import agileLogo from './agile.png';
-import pythonLogo from './python.png';
-import phpLogo from './php.png';
-import javascriptLogo from './javascript.png';
-import htmlLogo from './html.png';
-import './Subject.css';
+import reactLogo from './images/react.png';
+import sqlLogo from './images/sql.png';
+import laravelLogo from './images/laravel.png';
+import agileLogo from './images/agile.png';
+import pythonLogo from './images/python.png';
+import phpLogo from './images/php.png';
+import javascriptLogo from './images/javascript.png';
+import htmlLogo from './images/html.png';
+import './style/Subject.css';
 
 const Subjects = ({ onSelectSubject }) => {
   return (

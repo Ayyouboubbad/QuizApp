@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './ProgressNavbar.css'; 
+import '../style/ProgressNavbar.css'; 
 const ProgressNavbar = ({ currentStep, totalSteps }) => {
   return (
     

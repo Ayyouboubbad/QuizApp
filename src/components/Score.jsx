@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import t from './son.mp3'; 
-import './Score.css';
+import './style/Score.css';
 
 const Score = ({ score, totalQuestions, incorrectAnswers, onRestart, onRetry }) => {
   const [showIncorrectQuestions, setShowIncorrectQuestions] = useState(false);
@@ -31,7 +31,7 @@ const Score = ({ score, totalQuestions, incorrectAnswers, onRestart, onRetry }) 
   }, [score]);
 
   return (
-    <div>
+    <div id='div'>
       <h2>Résultat du Quiz</h2>
       <h3>Score : {score} / {totalQuestions}</h3>
 
@@ -45,13 +45,11 @@ const Score = ({ score, totalQuestions, incorrectAnswers, onRestart, onRetry }) 
       <button className='btns' onClick={toggleIncorrectQuestions}>
         {showIncorrectQuestions ? "Masquer les questions incorrectes" : "Voir les questions incorrectes"}
       </button>
-
       {showIncorrectQuestions && (
-        <ul>
+        <ul className="ul">
           {getIncorrectQuestions()}
         </ul>
       )}
-
       <button className='btns' onClick={onRestart}>Recommencer</button>
       <button className='btns' onClick={onRetry}>Réessayer</button>
     </div>

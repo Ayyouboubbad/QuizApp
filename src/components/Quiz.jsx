@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ProgressNavbar from './ProgressNavbar';
-import './Quiz.css';
-import questions from './questions';
-import x from './2943.mp3';
-
+import ProgressNavbar from './PageElements/ProgressNavbar';
+import './style/Quiz.css';
+import questions from './data/questions';
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -21,7 +19,6 @@ const Quiz = (props) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
 
-  const alertSound = new Audio(x);
 
   const initQuiz = () => {
     const newQuestions = shuffleArray([...questions[props.subject]]).slice(0, totalQuestions);
@@ -70,13 +67,6 @@ const Quiz = (props) => {
   }, [props.subject]);
 
   useEffect(() => {
-    if (timeLeft <= 10 && timeLeft >= 0) {
-      alertSound.currentTime = 0; // Réinitialisez le temps pour que le son redémarre
-      alertSound.play().catch((error) => {
-        console.error("Erreur de lecture du son :", error);
-      });
-    }
-
     if (timeLeft === 0) {
       handleAnswer(null); 
       setTimeLeft(30)
@@ -104,9 +94,7 @@ const Quiz = (props) => {
               key={index}
               onClick={() => handleAnswer(index)}
               style={{
-                padding: '10px',
-                fontSize: '16px',
-                cursor: 'pointer',
+                cursor: "pointer",
                 backgroundColor:
                   selectedAnswer !== null
                     ? index === currentQuestion.correct
